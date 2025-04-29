@@ -10,7 +10,7 @@ down: ## Stop the local development server
 	docker compose -f docker-compose.dev.yaml down --volumes
 
 run: ## Run in production mode
-	gunicorn app.main:app --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000
+	fastapi run
 
 build: ## Build the docker image
 	docker build -t api-airlfow-event-listener .
