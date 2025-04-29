@@ -1,0 +1,13 @@
+# To know more in https://github.com/redpanda-data/kowl/blob/master/docs/config/kowl.yaml
+
+kafka:
+  brokers:
+    - broker:29092
+  schemaRegistry:
+    enabled: true
+    urls: ["http://schema-registry:8081"]
+connect:
+  enabled: false
+server:
+  listenPort: 7777
+# metricsNamespace: kowl
