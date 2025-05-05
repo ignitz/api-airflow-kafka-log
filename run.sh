@@ -1,3 +1,3 @@
 #!/bin/bash
 
-fastapi run
+python -m fastapi run
