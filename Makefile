@@ -13,6 +13,4 @@ run: ## Run in production mode
 	fastapi run
 
 build: ## Build the docker image
-	docker build -t "192.168.3.2:50000/ignitz/api-airflow-kafka-log:$(shell git rev-parse HEAD)" .
-	docker push "192.168.3.2:50000/ignitz/api-airflow-kafka-log:$(shell git rev-parse HEAD)"
 	docker buildx build --progress=plain -f Dockerfile . --platform linux/amd64,linux/arm64 -t "ignitz/api-airflow-kafka-log:$(shell git rev-parse HEAD)" --push
