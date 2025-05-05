@@ -10,6 +10,8 @@ RUN chown -R airflow:airflow /app
 
 USER airflow
 
+ENV PATH="/home/airflow/.local/bin:$PATH"
+
 WORKDIR /app
 COPY --chown=airflow:airflow ./requirements.txt /app
 RUN pip install -r requirements.txt
